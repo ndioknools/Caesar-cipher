@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefHeight="1080.0" prefWidth="720.0"
+            style="-fx-background-color: #f5f5f5;">
+
+    <Label text="Decoding:"
+           layoutX="50.0" layoutY="20.0"
+           styleClass="input-label">
+    </Label>
+
+
+    <Label text="Input Encoded Text:"
+           layoutX="50.0" layoutY="50.0"
+
+           style="-fx-text-fill: #444444;">
+    </Label>
+
+    <!-- Input TextField -->
+    <TextField fx:id="encodedTextInputField"
+               layoutX="50.0" layoutY="80.0"
+               prefWidth="700.0" prefHeight="50.0"
+
+               promptText="Enter encoded text here"
+               style="-fx-background-color: #ffffff; -fx-border-color: #cccccc;">
+    </TextField>
+
+    <!-- Decipher Algorithm ComboBox -->
+    <ComboBox fx:id="decipherAlgorithmComboBox"
+              layoutX="50.0" layoutY="130.0"
+              prefWidth="700.0" prefHeight="30.0"
+              promptText="Select Decipher Algorithm"
+              style="-fx-background-color: #ffffff; -fx-border-color: #cccccc;">
+    </ComboBox>
+
+    <!-- Decode Button -->
+    <Button fx:id="decodeButton"
+            layoutX="320.0" layoutY="180.0"
+            text="Decode"
+
+            onAction="#handleDecode"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-cursor: hand;">
+    </Button>
+
+    <!-- Output Label -->
+    <Label text="Decoded Text:"
+           layoutX="50.0" layoutY="210.0"
+
+           style="-fx-text-fill: #444444;">
+    </Label>
+
+    <!-- Output TextArea -->
+    <TextArea fx:id="decodedTextOutput"
+              layoutX="50.0" layoutY="230.0"
+              prefWidth="700.0" prefHeight="150.0"
+              editable="false"
+
+              style="-fx-background-color: #ffffff; -fx-border-color: #cccccc;">
+    </TextArea>
+
+    <Label text="Encoding:"
+           layoutX="50.0" layoutY="400.0"
+
+           style="-fx-text-fill: #444444;">
+    </Label>
+
+
+    <!-- Encode Functionality -->
+    <Label text="Input Plain Text:"
+           layoutX="50.0" layoutY="430.0"
+           styleClass="input-label">
+    </Label>
+
+    <TextField fx:id="plainTextInputField"
+               layoutX="50.0" layoutY="460.0"
+               prefWidth="700.0" prefHeight="50.0"
+               promptText="Enter plain text here"
+               styleClass="input-field">
+    </TextField>
+
+    <ComboBox fx:id="keyComboBox"
+              layoutX="50.0" layoutY="510.0"
+              prefWidth="700.0" prefHeight="30.0"
+              promptText="Select Key(1-25) or skip selection for a random key"
+              style="-fx-background-color: #ffffff; -fx-border-color: #cccccc;">
+    </ComboBox>
+
+    <Button fx:id="encodeButton"
+            layoutX="320.0" layoutY="580.0"
+            text="Encode"
+            onAction="#handleEncode"
+            style="-fx-background-color: #ef0808; -fx-text-fill: white; -fx-cursor: hand;">
+    </Button>
+
+    <Label text="Encrypted Text:"
+           layoutX="50.0" layoutY="620.0"
+           styleClass="output-label">
+    </Label>
+
+    <TextArea fx:id="encryptedTextOutput"
+              layoutX="50.0" layoutY="650.0"
+              prefWidth="700.0" prefHeight="100.0"
+              editable="false"
+              styleClass="output-area">
+    </TextArea>
+
+
+</AnchorPane>
